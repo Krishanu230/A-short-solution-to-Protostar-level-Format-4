@@ -38,13 +38,13 @@ Since there is a exit call, there is no use of overwriting the return address po
 
 To redirect the code execution, we simply go to procedure linkage table of the program which will lead us to the exit address on the Global offset table.
 Now we exploit the format string exploit to overwrite it. 
-Now the usual solutions you will see on internet(like on the live overflow website) involve overwriting it in two parts using format specifier %n and some little neat tricks with their modifiers.
-Since the half hexadecimal address is a very large number in binary. We have to print thousands of blank spaces to achieve that overwrite.
+Now the usual solutions you will see on internet(like the one on the live overflow website) involve overwriting it in two parts using format specifier %n and some little neat tricks with their modifiers.
+But half the hexadecimal address is still a very large number in decimal. We have to print thousands of blank spaces to achieve that overwrite.
 
-What we can do instead is write the address in four passes writing 1 byte in each passes. We can significantly reduce the number of printed characters. 
-There will be over flow in each write but that will get overwritten in the next pass and int the 4th pass the overflow will be to the next memory adress but since we care only about 4 bytes it'll work
+What we can do instead is write the address in four passes writing 1 byte in each passes. We can significantly reduce the number of printed characters from tens of thousands to a few hundred. 
+There will be over flow in each write but that will get overwritten in the next pass and in the 4th pass the overflow will be to the next memory adress (with reference to the script it'll be at EXIT4) but since we care only about 4 bytes it'll work
 
-NOte that the code will only run on protostarOS.
+Note that the code will only run on protostarOS for obvious reasons.
 ##Here's the actual python code to do so
 ```
 HELLO = 0x080484b4
