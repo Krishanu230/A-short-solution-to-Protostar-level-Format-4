@@ -48,6 +48,7 @@ Note that the code will only run on protostarOS for obvious reasons.
 
 ## Here's the actual python code to do so
 ```
+import struct
 HELLO = 0x080484b4
 EXIT = 0x08049724
 EXIT1 = 0x8049725
