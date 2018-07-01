@@ -45,7 +45,8 @@ What we can do instead is write the address in four passes writing 1 byte in eac
 There will be over flow in each write but that will get overwritten in the next pass and in the 4th pass the overflow will be to the next memory adress (with reference to the script it'll be at EXIT4) but since we care only about 4 bytes it'll work
 
 Note that the code will only run on protostarOS for obvious reasons.
-##Here's the actual python code to do so
+
+## Here's the actual python code to do so
 ```
 HELLO = 0x080484b4
 EXIT = 0x08049724
