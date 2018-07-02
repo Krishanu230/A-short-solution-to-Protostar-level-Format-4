@@ -41,7 +41,7 @@ Now we exploit the format string exploit to overwrite it.
 Now the usual solutions you will see on internet(like the one on the live overflow website) involve overwriting it in two parts using format specifier %n and some little neat tricks with their modifiers.
 But half the hexadecimal address is still a very large number in decimal. We have to print thousands of blank spaces to achieve that overwrite.
 
-What we can do instead is write the address in four passes writing 1 byte in each passes. We can significantly reduce the number of printed characters from tens of thousands to a few hundred. 
+What we can do instead is write the address partially in four passes writing 1 byte in each passes. We can significantly reduce the number of printed characters from tens of thousands to a few hundred. 
 There will be over flow in each write but that will get overwritten in the next pass and in the 4th pass the overflow will be to the next memory adress (with reference to the script it'll be at EXIT4) but since we care only about 4 bytes it'll work
 
 Note that the code will only run on protostarOS for obvious reasons.
