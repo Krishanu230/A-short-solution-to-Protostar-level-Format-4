@@ -1,5 +1,5 @@
 # A-short-solution-to-Protostar-level-Format-4
-## the c code
+## the c-code
 Here's the source code 
 ```
 #include <stdlib.h>
