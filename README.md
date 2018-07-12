@@ -37,7 +37,7 @@ Our aim is to redirect the code execution to hello(). This is an easy problem so
 Since there is a exit call, there is no use of overwriting the return address pointer on the stack.
 
 To redirect the code execution, we simply go to procedure linkage table of the program which will lead us to the exit address on the Global offset table.
-Now we exploit the format string exploit to overwrite it. 
+Now we exploit the format string vuln to overwrite it. 
 Now the usual solutions you will see on internet(like the one on the live overflow website) involve overwriting it in two parts using format specifier %n and some little neat tricks with their modifiers.
 But half the hexadecimal address is still a very large number in decimal. We have to print thousands of blank spaces to achieve that overwrite.
 
